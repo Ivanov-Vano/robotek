@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-
     font-size: 15px;
     line-height: 1.6;
     color: #333;
@@ -121,6 +120,7 @@ hr {
 }
 
 .header.active {
+    padding: 10px 0;
     background-color: #eb8b8d;
 }
 
@@ -367,6 +367,10 @@ hr {
 .section--map {
     padding: 40px 0;
     background: #e6e6e6 url("../images/map-bg.jpg") center no-repeat / cover;
+}
+
+.section--post {
+    padding-top: 120px;
 }
 
 .section__header {
@@ -1334,7 +1338,7 @@ hr {
 
     /* Stat */
     .stat {
-       justify-content: center;
+        justify-content: center;
     }
 
     .stat__item {

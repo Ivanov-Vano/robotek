@@ -1,13 +1,17 @@
-title = "Robotek домашняя страница"
 url = "/"
 layout = "default"
+title = "Robotek домашняя страница"
+meta_title = "Роботек - самая крутая компания"
+meta_description = "Нет лучше компании, чем Роботек"
+
+[contenteditor]
 ==
 <!-- Intro -->
 <div class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
             <h2 class="intro__suptitle">Creative Template</h2>
-            <h1 class="intro__title">Welcome to MoGo</h1>
+            {% component 'contenteditor' file="intro/title.htm" fixture="h1" class="intro__title" %}
 
             <a class="btn" href="#">Learn More</a>
         </div>
@@ -44,41 +48,13 @@ layout = "default"
     <div class="container">
 
         <div class="section__header">
-            <h3 class="section__suptitle">What we do</h3>
-            <h2 class="section__title">Story about us</h2>
-            <div class="section__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+            <h3 class="section__suptitle">Что мы делаем</h3>
+            <h2 class="section__title">История о нас</h2>
+           <!-- <div class="section__text"> -->
+                {% component 'contenteditor' file="about/text.htm" fixture="p" class="section__text" %}
         </div>
 
-        <div class="card">
-            <div class="card__item">
-                <div class="card__inner">
-                    <div class="card__img">
-                        <img src="{{'assets/images/about/1.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="card__text">super team</div>
-                </div>
-            </div>
-
-            <div class="card__item">
-                <div class="card__inner">
-                    <div class="card__img">
-                        <img src="{{'assets/images/about/2.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="card__text">super team</div>
-                </div>
-            </div>
-
-            <div class="card__item">
-                <div class="card__inner">
-                    <div class="card__img">
-                        <img src="{{'assets/images/about/3.jpg'|theme}}" alt="">
-                    </div>
-                    <div class="card__text">super team</div>
-                </div>
-            </div>
-        </div>
+        {% partial 'about' %}
 
     </div><!-- /.container -->
 </section>
@@ -120,48 +96,11 @@ layout = "default"
     <div class="container">
 
         <div class="section__header">
-            <h3 class="section__suptitle">We work with</h3>
-            <h2 class="section__title">Amazing Services</h2>
+            <h3 class="section__suptitle">Мы работаем с</h3>
+            <h2 class="section__title">Волшебные службы</h2>
         </div>
 
-        <div class="services">
-            <div class="services__item  services__item--border">
-                <img class="services__icon" src="assets/images/services/photography.png" alt="">
-
-                <div class="services__title">Photography</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-            <div class="services__item  services__item--border">
-                <img class="services__icon" src="assets/images/services/webdesign.png" alt="">
-
-                <div class="services__title">Web Design</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-            <div class="services__item  services__item--border">
-                <img class="services__icon" src="assets/images/services/creativity.png" alt="">
-
-                <div class="services__title">Creativity</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-            <div class="services__item">
-                <img class="services__icon" src="assets/images/services/seo.png" alt="">
-
-                <div class="services__title">seo</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-            <div class="services__item">
-                <img class="services__icon" src="assets/images/services/css-html.png" alt="">
-
-                <div class="services__title">Css/Html</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-            <div class="services__item">
-                <img class="services__icon" src="assets/images/services/digital.png" alt="">
-
-                <div class="services__title">digital</div>
-                <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-            </div>
-        </div>
+        {% partial 'services' %}
 
     </div><!-- /.container -->
 </section>
@@ -378,26 +317,7 @@ layout = "default"
 <div class="section  section--gray">
     <div class="container">
 
-        <div class="logos">
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/1.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/2.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/3.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/4.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/5.png" alt="">
-            </div>
-            <div class="logos__item">
-                <img class="logos__img" src="assets/images/logos/6.png" alt="">
-            </div>
-        </div>
+            {% partial 'logos' %}
 
     </div>
 </div>
@@ -511,13 +431,3 @@ layout = "default"
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-

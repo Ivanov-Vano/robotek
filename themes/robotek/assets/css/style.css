@@ -1305,7 +1305,20 @@ hr {
     color: #f38181;
 }
 
+/* Comments */
+.comments {
+    margin-top: 50px;
+}
+.comments__count {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 
+    border-bottom: 2px solid
+    #0000cc;
+
+    font-size: 20px;
+    color: #121212;
+}
 
 
 @media (max-width: 1230px) {

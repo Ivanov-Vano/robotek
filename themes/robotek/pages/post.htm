@@ -5,6 +5,11 @@ title = "Blog Post"
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "home"
+
+[commentsPost]
+
+[SeoBlogPost]
+post = "post"
 ==
 <?php
 function onEnd()
@@ -14,7 +19,7 @@ return App::make('Cms\Classes\Controller')->setStatusCode(404)->run('/404');
 }
 ?>
 ==
-
+{% component 'SeoBlogPost' data=post %}
 <section class="section section--post">
    <div class="container">
        <div class="section__header">
@@ -26,5 +31,6 @@ return App::make('Cms\Classes\Controller')->setStatusCode(404)->run('/404');
        <div class="post">
            {{post.content_html|raw}}
        </div>
+       {% component 'commentsPost' %}
    </div>
 </section>
